@@ -11,4 +11,14 @@ class BlogController < ApplicationController
     def new
         @blog = Blog.new
     end
+
+    def create
+        @blog = Blog.create(blog_params)
+    end
 end
+
+    private
+    def blog_params
+        param.require(:blog).permit(:title, content)
+    end
+
