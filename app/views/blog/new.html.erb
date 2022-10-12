@@ -1,0 +1,13 @@
+<h3>Add a New Mountain Experience</h3>
+<%= form_with model: @blog do |form| %>
+
+  <%= form.label :content %>
+  <%= form.text_field :content %>
+
+  <br>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+
+  <br>
+  <%= form.submit 'Add Blog' %>
+<% end %>

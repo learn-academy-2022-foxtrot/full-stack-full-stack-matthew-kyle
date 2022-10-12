@@ -3,10 +3,7 @@
 
 <ul>
   <% @blogs.each do |blog| %>
-  <li><%= blog.title %></li>
+  <li><%= link_to blog.title, blog_path(blog)%></li>
   <% end %>
-  <p>Big Bear Lake, CA</p>
-  <p>North Lake Tahoe, NV</p>
-  <p>Park City, UT</p>
-  <p>Breckenridge, CO</p>
+  
 </ul>
