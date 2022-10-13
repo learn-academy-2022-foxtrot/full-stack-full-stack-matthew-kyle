@@ -1,8 +1,12 @@
 <h3><%= @blog.title %></h3>
 <p><%= @blog.content %></p>
 <br>
-<p> <%= link_to 'Back to Home', blogs_path%></p>
-<p> <%= link_to "Delete post", blog_path(@blog), data: {
-                  'turbo_method': :delete,
-                  'turbo_confirm': "Are you sure?"
-                } %></p>
+<p> 
+<%= link_to 'Edit Post', blogs_path %>
+</p>
+<p> 
+<%= link_to 'Delete post', blog_path(@blog), data: { 'turbo_method': :delete,'turbo_confirm': "Are you sure?"} %>
+</p>
+<p> 
+<%= link_to 'Back to Home', blogs_path%>
+</p>
