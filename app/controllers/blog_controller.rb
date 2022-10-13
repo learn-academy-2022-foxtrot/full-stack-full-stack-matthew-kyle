@@ -18,12 +18,20 @@ class BlogController < ApplicationController
             redirect_to blogs_path
         end
     end
-
+    
+    def destroy
+        @blog = Blog.find(params[:id])
+        if @blog.destroy
+            redirect_to blogs_path(@blog)
+        end
+    end
+    
     #keyword that will prohibit methods from being called outside the scope of this class
     private
     #strong params - data protections inside a request
     def blog_params
         params.require(:blog).permit(:title, :content)
     end
+
 end
 
