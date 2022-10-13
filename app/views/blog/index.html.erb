@@ -1,11 +1,17 @@
 <h1>Snowboarding Blog</h1>
+
 <br />
 
 <ul>
   <% @blogs.each do |blog| %>
-  <li><%= link_to blog.title, blog_path(blog)%></li>
+  <li>
+  <%= link_to blog.title, blog_path(blog)%>
+  </li>
   <% end %>
-  
 </ul>
+
 <br/>
-<p><%= link_to 'Add New Blog!', new_blog_path %></p>
+
+<p>
+<%= link_to 'Add New Blog!', new_blog_path %>
+</p>
